@@ -79,6 +79,7 @@ CREATE TABLE charity (
         constraint pk_charity_id primary key (charity_id)
 );
 
+
 ALTER table item 
 ADD CONSTRAINT fk_auction_id FOREIGN KEY (auction_id) REFERENCES auction (auction_id),
 ADD CONSTRAINT fk_user_id FOREIGN KEY (user_id) REFERENCES users (user_id);
@@ -94,7 +95,7 @@ Alter table users
 add column phone_number VARCHAR (12), 
 --TODO check contraint on phone number
 add column time_available VARCHAR (25),
-add column adress VARCHAR (75);
+add column address VARCHAR (75);
 
 
 COMMIT TRANSACTION;

@@ -1,12 +1,15 @@
 package com.techelevator.dao;
 
+import org.springframework.stereotype.Component;
 import com.techelevator.model.Charity;
+
+@Component
 
 public interface CharityDao {
 
-    boolean createCharity(Charity charity);
+    void createCharity(Charity charity);
 
-    boolean updateCharity(Charity charity);
+    void updateCharity(Charity charity);
 
     Charity getCharityByName(String charityName);
 }
