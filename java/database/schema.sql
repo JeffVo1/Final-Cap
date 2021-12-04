@@ -21,21 +21,21 @@ CREATE TABLE users (
 INSERT INTO users (username,password_hash,role) VALUES ('user','$2a$08$UkVvwpULis18S19S5pZFn.YHPZt3oaqHZnDwqbCW9pft6uFtkXKDC','ROLE_USER');
 INSERT INTO users (username,password_hash,role) VALUES ('admin','$2a$08$UkVvwpULis18S19S5pZFn.YHPZt3oaqHZnDwqbCW9pft6uFtkXKDC','ROLE_ADMIN');
 
-ALTER table item 
-DROP CONSTRAINT fk_auction_id,
-DROP CONSTRAINT fk_user_id;
+-- ALTER table item 
+-- DROP CONSTRAINT fk_auction_id,
+-- DROP CONSTRAINT fk_user_id;
 
-ALTER table auction
-DROP CONSTRAINT fk_charity_id;
+-- ALTER table auction
+-- DROP CONSTRAINT fk_charity_id;
 
-ALTER table bids 
-DROP CONSTRAINT fk_auction_id_bids,
-DROP CONSTRAINT fk_user_id_bids;
+-- ALTER table bids 
+-- DROP CONSTRAINT fk_auction_id_bids,
+-- DROP CONSTRAINT fk_user_id_bids;
 
-ALTER table users
-DROP column phone_number,
-Drop column time_available,
-drop column adress;
+-- ALTER table users
+-- DROP column phone_number,
+-- Drop column time_available,
+-- drop column adress;
 
 DROP TABLE IF EXISTS item;
 DROP TABLE IF EXISTS auction; 
