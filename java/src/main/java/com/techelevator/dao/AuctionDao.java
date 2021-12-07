@@ -1,16 +1,16 @@
 package com.techelevator.dao;
 
 import com.techelevator.model.Auction;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
+@Component
 
 public interface AuctionDao {
 
     List<Auction> getAllAuctions();
 
-    Auction getAuctionById(int auctionId);
+ void createAuction(Auction auction);
 
-    boolean createAuction(Auction auction);
-
-    boolean updateAuction(Auction auction);
+    void updateAuction(Auction auction);
 }
