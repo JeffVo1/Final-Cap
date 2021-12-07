@@ -62,12 +62,13 @@ const router = new Router({
       meta: {
         requiresAuth: false
       },
-      path:"/edit-item" ,
+      
+      path:"/edit-item/:id" ,
       name:"edit-item" ,
       component:EditItem ,
       meta: {
         requiresAuth: false
-
+      }
     }
   ]
 })
