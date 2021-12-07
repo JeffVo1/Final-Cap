@@ -5,6 +5,8 @@ import Login from '../views/Login.vue'
 import Logout from '../views/Logout.vue'
 import Register from '../views/Register.vue'
 import store from '../store/index'
+import AddItem from '/views/AddItem.vue'
+import EditItem from '/views/EditItem.vue'
 
 Vue.use(Router)
 
@@ -53,6 +55,20 @@ const router = new Router({
         requiresAuth: false
       }
     },
+    {
+      path:"/add-item" ,
+      name:"add-item" ,
+      component:AddItem ,
+      meta: {
+        requiresAuth: false
+      },
+      path:"/edit-item" ,
+      name:"edit-item" ,
+      component:EditItem ,
+      meta: {
+        requiresAuth: false
+
+    }
   ]
 })
 
