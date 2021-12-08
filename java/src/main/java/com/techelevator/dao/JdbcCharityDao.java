@@ -5,6 +5,9 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Component
 
 public class JdbcCharityDao implements CharityDao{
@@ -46,4 +49,26 @@ public class JdbcCharityDao implements CharityDao{
         }
         return null;
     }
+    public List<Charity> getAllCharityWithActiveAuction(){
+       List<Charity> charityList = new ArrayList<>();
+       String sql = "SELECT charity_name, charity.charity_id " +
+               "FROM charity " +
+               "JOIN auction " +
+               "on charity.charity_id = auction.charity_id " +
+               "WHERE auction.status = 'active';";
+       SqlRowSet result = jdbcTemplate.queryForRowSet(sql);
+       while (result.next()){
+           charityList.add(mapRowToCharity(result));
+       }
+       return charityList;
+
+    }
+
+    public Charity mapRowToCharity(SqlRowSet results){
+        Charity charity = new Charity();
+        charity.setCharityName(results.getString("charity_name"));
+        charity.setCharityId(results.getFloat("charity_id"));
+        return charity;
+    }
+
 }

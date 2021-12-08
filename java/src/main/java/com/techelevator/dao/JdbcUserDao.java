@@ -1,5 +1,6 @@
 package com.techelevator.dao;
 
+import java.security.Principal;
 import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +21,13 @@ public class JdbcUserDao implements UserDao {
 
     public JdbcUserDao(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
+    }
+
+
+
+    public long getUserIdByPrincipal(Principal principal){
+       return findIdByUsername(principal.getName());
+
     }
 
     @Override
