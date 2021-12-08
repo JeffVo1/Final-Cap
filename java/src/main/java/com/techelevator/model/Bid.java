@@ -4,10 +4,9 @@ public class Bid {
 
 
     public float bidId;
-    public int auctionId;
+    public int itemId;
     public int userId;
     public int amount;
-
 
     public float getBidId() {
         return bidId;
@@ -17,12 +16,12 @@ public class Bid {
         this.bidId = bidId;
     }
 
-    public int getAuctionId() {
-        return auctionId;
+    public int getItemId() {
+        return itemId;
     }
 
-    public void setAuctionId(int auctionId) {
-        this.auctionId = auctionId;
+    public void setItemId(int itemId) {
+        this.itemId = itemId;
     }
 
     public int getUserId() {

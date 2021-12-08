@@ -1,14 +1,15 @@
 package com.techelevator.model;
 
+import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.Date;
 
 public class Auction {
     private float auctionId;
     private int charityId;
-    private int startBid;
     private Timestamp startTime;
-    private String status;
+    private String status = "active";
+    private Timestamp endTime;
 
 
     public float getAuctionId() {
@@ -27,14 +28,6 @@ public class Auction {
         this.charityId = charityId;
     }
 
-    public int getStartBid() {
-        return startBid;
-    }
-
-    public void setStartBid(int startBid) {
-        this.startBid = startBid;
-    }
-
     public Timestamp getStartTime() {
         return startTime;
     }
@@ -49,5 +42,13 @@ public class Auction {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public Timestamp getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(Timestamp endTime) {
+        this.endTime = endTime;
     }
 }

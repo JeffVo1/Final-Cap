@@ -1,10 +1,11 @@
 package com.techelevator.dao;
 
 import com.techelevator.model.Bid;
+import org.springframework.stereotype.Component;
 
 import java.security.Principal;
 import java.util.List;
-
+@Component
 public class JdbcBidDao implements BidDao{
     @Override
     public Bid getBidByUserId(int userId) {

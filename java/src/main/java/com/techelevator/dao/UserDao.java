@@ -1,10 +1,15 @@
 package com.techelevator.dao;
 
 import com.techelevator.model.User;
+import org.springframework.stereotype.Component;
 
+import java.security.Principal;
 import java.util.List;
-
+@Component
 public interface UserDao {
+
+
+    long getUserIdByPrincipal(Principal principal);
 
     List<User> findAll();
 
