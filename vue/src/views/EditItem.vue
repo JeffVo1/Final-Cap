@@ -1,19 +1,13 @@
 <template>
-    <div>
-    
-    
-    <div>
+  <div>
+    <edit-item />
+  </div>
 </template>
 
 
 
 <script>
-
-
 export default {
-    components: {
-        
-    }
-    
-}
+  components: {},
+};
 </script>

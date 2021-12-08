@@ -1,19 +1,11 @@
 <template>
-<form v-on:
-<div>
-
-
-</div>
-    
+  <form v-on: />
 </template>
 
 <script>
-
-
 export default {
-    name: ,
-    methods: ,
-    computed: 
-    
-}
+  name: {},
+  methods: {},
+  computed: {},
+};
 </script>
