@@ -7,7 +7,7 @@ public class Item {
     public String itemName;
     public String description;
     public int userId;
-    public int price;
+
 
     public float getItemId() {
         return itemId;
@@ -47,13 +47,5 @@ public class Item {
 
     public void setUserId(int userId) {
         this.userId = userId;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
     }
 }
